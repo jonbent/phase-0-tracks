@@ -1,6 +1,6 @@
 # Git Definitions
 
-**Instructions: ** Define each of the following Git concepts
+**Instructions: ** Define each of the following Git concepts.
 
 * What is version control? Version control is the ability to view all the history of revisions of a repository, and the ability to merge them. 
 Why is it useful? If you tryed to merge huge amounts of data manually, it would take an extremely high amount of time and most likely a lot of mistakes would happen
