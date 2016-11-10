@@ -1,0 +1,16 @@
+img#octopus{
+	position:relative;
+	top:40px;
+}
+img#hat{
+	position:absolute;
+	height:50px;
+	top:10px;
+	left:100px;
+}
+
+img#glasses{
+	position: absolute;
+	top:150px;
+	left: 50px;
+}
