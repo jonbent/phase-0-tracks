@@ -1,0 +1,14 @@
+- find out what button user wants to be pushed
+	-push button which has the same corresponding number as inputed.
+	- wait 10 seconds for response
+- if user doesn't answer:
+		- press open door button.
+		- kick them out of elevator.
+
+A robot may be able to tell how much cream is ideal for coffee, here's a way it could do it:
+
+- pour milk into coffee
+	- is the coffee too brown? 
+		- keep pouring
+	- coffee just right?
+		- STOP!
