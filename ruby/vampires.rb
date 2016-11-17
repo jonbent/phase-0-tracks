@@ -5,7 +5,7 @@ def screen
 	while employees > 0
 
 		puts "Name?"
-		name = gets.chomp
+		employee_name = gets.chomp
 
 		puts "Age?"
 		age = gets.chomp
@@ -25,32 +25,15 @@ def screen
 		else
 			check_age = false
 		end
-		
-		def logic
-			if check_age && (garlic || immortal)
-				puts "Probably not a vampire."
-			elsif !(check_age && garlic && immortal)
-				puts "Almost certainly a vampire."
-			elsif !check_age && !(garlic || immortal)
-				puts "Probably a vampire."
-			elsif name ="Drake Cula" || "Tu Fang"
-				puts "Definitely a vampire."
-			else 
-				puts "Results inconclusive."
-			end
-		end
 		vampire = false
-		puts "input allergies"
+		puts "Allergies?"
 		until vampire == true
 		input = gets.chomp
 			if input == "done"
 				vampire = true
-				logic
-				break
 			elsif input == "sunshine"
 				puts "Probably a vampire"
 				vampire = true
-				break
 			end
 		end
 =begin
@@ -66,7 +49,20 @@ def screen
 			puts "false"
 		end
 =end
-	employees -= 1
+
+
+		if employee_name == "Drake Cula" || "Tu Fang"
+			puts "Definitely a vampire."
+		elsif check_age && (garlic || immortal)
+			puts "Probably not a vampire."
+		elsif !(check_age && garlic && immortal)
+			puts "Almost certainly a vampire."
+		elsif !check_age && !(garlic || immortal)
+			puts "Probably a vampire."
+		else 
+			puts "Results inconclusive."
+		end
+		employees -=1 
 	end
 end 
 
