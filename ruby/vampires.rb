@@ -4,20 +4,55 @@ def screen
 	employees = Integer(gets.chomp)
 	while employees > 0
 
-		puts "what is your name?"
-		name = gets
+		puts "Name?"
+		name = gets.chomp
 
-		puts "How old are you?"
-		age = gets
+		puts "Age?"
+		age = gets.chomp
 
-		puts "What year were you born?"
-		yob = gets
+		puts "Year of birth?"
+		yob = gets.chomp
 
-		puts "Our company cafeteria serves garlic bread, do you want some?"
-		garlic = gets
+		puts "Likes garlic bread?"
+		garlic = gets.chomp
 
-		puts "Will you be needing health insurance?"
-		immortal = gets
+		puts "Need health insurance?"
+		immortal = gets.chomp
+
+		check_age = false
+		if 2016 - yob.to_i == age.to_i
+			check_age = true
+		else
+			check_age = false
+		end
+		
+		def logic
+			if check_age && (garlic || immortal)
+				puts "Probably not a vampire."
+			elsif !(check_age && garlic && immortal)
+				puts "Almost certainly a vampire."
+			elsif !check_age && !(garlic || immortal)
+				puts "Probably a vampire."
+			elsif name ="Drake Cula" || "Tu Fang"
+				puts "Definitely a vampire."
+			else 
+				puts "Results inconclusive."
+			end
+		end
+		vampire = false
+		puts "input allergies"
+		until vampire == true
+		input = gets.chomp
+			if input == "done"
+				vampire = true
+				logic
+				break
+			elsif input == "sunshine"
+				puts "Probably a vampire"
+				vampire = true
+				break
+			end
+		end
 =begin
 		wolves_like_sunshine = true
 		wolves_like_garlic = true
@@ -31,40 +66,12 @@ def screen
 			puts "false"
 		end
 =end
-
-#Doesnt work unless I have variables to give it
-
-		if age && (garlic || immortal)
-			puts "Probably not a vampire."
-		elsif !(age && garlic && immortal)
-			puts "Almost certainly a vampire."
-		elsif !age && !(garlic || immortal)
-			puts "Probably a vampire."
-		elsif name ="Drake Cula" || "Tu Fang"
-			puts "Definitely a vampire."
-		else 
-			puts "Results inconclusive."
-		end
-		employees -=1 
+	employees -= 1
 	end
 end 
-def allergies 
-	vampire = false
-	puts "tell me your allergies."
-	until vampire == true
-	input = gets.chomp
-		if input == "done"
-			vampire = true
-			break
-		elsif input == "sunshine"
-			puts "Probably a vampire"
-			vampire = true
-		end
-	end
-end
 
+screen
 
-allergies
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
 #To run the following code it will have to be implemented in. 
@@ -88,4 +95,3 @@ def practice_program
 	end
 end
 
-practice_program
