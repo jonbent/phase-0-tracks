@@ -51,7 +51,7 @@ def screen
 =end
 
 
-		if employee_name == "Drake Cula" || "Tu Fang"
+		if employee_name == "Drake Cula" || employee_name == "Tu Fang"
 			puts "Definitely a vampire."
 		elsif check_age && (garlic || immortal)
 			puts "Probably not a vampire."
