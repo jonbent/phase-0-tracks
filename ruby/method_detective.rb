@@ -12,7 +12,7 @@
 "zom".insert(2, 'o')
 # => “zoom”
 
-# "enhance".center(15)
+"enhance".center(15)
 # => "    enhance    "
 
 "Stop! You’re under arrest!".upcase
@@ -41,5 +41,5 @@
 # (What is the significance of the number 122 in relation to the character z?)
 # This is the ASCII value of the letter z, every character has one, so this is it's individual number.
 
-"How many times does the letter 'a' appear in this string?"count('a')
+"How many times does the letter 'a' appear in this string?".count('a')
 # => 4
