@@ -7,10 +7,13 @@
 
 def encrypt
 	quit = 0
+	counter = 0
 	fake_names = []
+	spys_real_name = []
 	puts "spy's name? Type quit to end"
 	until quit == 'quit'
 		spys_name = gets.chomp
+		spys_real_name << spys_name
 		quit = spys_name
 		spys_name_length = spys_name.length
 		spys_name = spys_name.split.reverse
@@ -50,7 +53,13 @@ def encrypt
 		fake_names << spys_name
 	end
 	fake_names.delete("Quit")
-	fake_names
+	spys_real_name.delete("quit")
+	
+	spys_real_name.each do |name|
+		puts "#{fake_names[counter]} is really #{name}"
+		counter += 1
+	end
+
 end
 
 
