@@ -2,7 +2,7 @@
 
 # split spy's name, reverse it, then join it back together, might be messy use irb first.
 # define encrypting method
-# inside, define consonates and vowels methods.
+# inside, define consonates and vowels methods, ended up using arrays instead, seemed easier than my previous try with the encrypt program
 
 
 def encrypt
