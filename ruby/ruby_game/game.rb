@@ -53,16 +53,16 @@ until guesses == 0 || empty_answer_array.join('') == word
     	guesses = 0
   	elsif !guess_list.include?(game.guess)
     	guess_list << game.guess
-    if answer_array.include?(game.guess)
-    	game.switch_duplicates
-    	game.current_guess = empty_answer_array.join(" ")
-    	game.progress
-    
-    else
-    	guesses -=1
-    	puts "WRONG! you have #{guesses} guesses left"
-    	game.progress
-    end
+	    if answer_array.include?(game.guess)
+	    	game.switch_duplicates
+	    	game.current_guess = empty_answer_array.join(" ")
+	    	game.progress
+	    
+	    else
+	    	guesses -=1
+	    	puts "WRONG! you have #{guesses} guesses left"
+	    	game.progress
+	    end
 	else 
     	puts "well you already entered that, so try again."
     	game.current_guess
