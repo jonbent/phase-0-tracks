@@ -16,13 +16,13 @@ class Hangman
     	p @current_guess
   	end
   	def lose_game
-    	puts "wow you lost... you're pathetic"
-    	puts "These were your guesses: #{@guess_list.join(", ")}"
+    	p "wow you lost... you're pathetic"
+    	p "These were your guesses: #{@guess_list.join(", ")}"
   	end
   
   	def win_game
-   		puts "You guessed the word! You're so cool!"
-   		puts "These were your guesses: #{@guess_list.join(", ")}"
+   		p "You guessed the word! You're so cool!"
+   		p "These were your guesses: #{@guess_list.join(", ")}"
   	end
   
   	def switch_duplicates
@@ -41,7 +41,7 @@ class Hangman
 	    
 	    else
 	    	@guesses -= 1
-	    	puts "WRONG! you have #{@guesses} guesses left"
+	    	p "WRONG! you have #{@guesses} guesses left"
 	    	@current_guess = @empty_answer_array.join(" ")
 	    	progress
 	    end
@@ -59,7 +59,7 @@ class Hangman
 	    	@guess_list << @guess
 	    	correct_letter
 		else 
-	    	puts "well you already entered that, so try again."
+	    	p "well you already entered that, so try again."
 	    	@current_guess
 	  	end
   	end
@@ -68,7 +68,7 @@ class Hangman
 		  	win_game
 		else
 		  	lose_game
-		  	p current_guess
+		  	current_guess
 		end
   	end
 
