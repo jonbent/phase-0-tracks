@@ -13,16 +13,16 @@ class Hangman
 		@guesses = 6
 	end
   	def progress
-    	p @current_guess
+    	puts @current_guess
   	end
   	def lose_game
-    	p "wow you lost... you're pathetic"
-    	p "These were your guesses: #{@guess_list.join(", ")}"
+    	puts "wow you lost... you're pathetic"
+    	puts "These were your guesses: #{@guess_list.join(", ")}"
   	end
   
   	def win_game
-   		p "You guessed the word! You're so cool!"
-   		p "These were your guesses: #{@guess_list.join(", ")}"
+   		puts "You guessed the word! You're so cool!"
+   		puts "These were your guesses: #{@guess_list.join(", ")}"
   	end
   
   	def switch_duplicates
@@ -41,7 +41,7 @@ class Hangman
 	    
 	    else
 	    	@guesses -= 1
-	    	p "WRONG! you have #{@guesses} guesses left"
+	    	puts "WRONG! you have #{@guesses} guesses left"
 	    	@current_guess = @empty_answer_array.join(" ")
 	    	progress
 	    end
@@ -59,7 +59,7 @@ class Hangman
 	    	@guess_list << @guess
 	    	correct_letter
 		else 
-	    	p "well you already entered that, so try again."
+	    	puts "well you already entered that, so try again."
 	    	@current_guess
 	  	end
   	end
@@ -81,6 +81,7 @@ class Hangman
 end
 # user interface
 # hangman gives 6 guesses traditionally.
+# driver code:
 puts "Welcome to hangman, please insert word for partner to guess"
 word = gets.chomp
 print "\e[2J\e[f"
