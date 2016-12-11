@@ -13,6 +13,6 @@ function Longest(array) {
 	};
 }
 var array = ["long phrase","longest phrase","longer phrase"];
-longest_program = new Longest(array);
+var longest_program = new Longest(array);
 
 longest_program.choose_longest();
