@@ -22,7 +22,7 @@ longest_program = new Longest(array);
 longest_program.choose_longest();
 
 
-function sharing_is_caring(object_1, object_2) {
+function Sharing_is_caring(object_1, object_2) {
   this.object_1 = object_1;
   this.object_2 = object_2;
 	
