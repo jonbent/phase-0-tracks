@@ -14,7 +14,6 @@ function Longest(array) {
 }
 var array = ["long phrase","longest phrase","longer phrase"];
 var longest_program = new Longest(array);
-
 longest_program.choose_longest();
 
 array = ["123", "12345", "1234", "1"]
@@ -79,3 +78,13 @@ word_generator.make_random_word();
 
 word_generator = new Random_words(7);
 word_generator.make_random_word();
+
+for (x = 0; x < 10; x++){
+  word_generator = new Random_words(5);
+  word_generator.make_random_word();
+  arrays = word_generator.random_string.split(" ")
+  console.log(arrays)
+  longest_program = new Longest(word_generator.random_string.split(" "));
+  longest_program.choose_longest();
+  
+}
