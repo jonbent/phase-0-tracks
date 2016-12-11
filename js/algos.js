@@ -16,3 +16,7 @@ var array = ["long phrase","longest phrase","longer phrase"];
 var longest_program = new Longest(array);
 
 longest_program.choose_longest();
+
+array = ["123", "12345", "1234", "1"]
+longest_program = new Longest(array);
+longest_program.choose_longest();
