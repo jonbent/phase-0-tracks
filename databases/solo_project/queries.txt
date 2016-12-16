@@ -35,7 +35,13 @@ sqlite> DELETE FROM dogs WHERE name = 'Snookums';
 RELEASE 3
 
 SELECT dogs.name, breeds.name, dogs.insanity FROM dogs JOIN breeds ON dogs.breed_id = breeds.id;
+Champion|Golden Retriever|FALSE
+Craig|Golden Retriever|TRUE
+Duck|Corgi|TRUE
 
 SELECT dogs.name, breeds.name, dogs.insanity FROM breeds JOIN dogs ON dogs.breed_id = breeds.id;
+Champion|Golden Retriever|FALSE
+Craig|Golden Retriever|TRUE
+Duck|Corgi|TRUE
 
 I don't know what else to join with what I gave it. Interesting that if I switch the tables in the statement it still works.
