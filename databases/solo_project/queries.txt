@@ -1,0 +1,41 @@
+1.
+sqlite> SELECT * FROM dogs;
+1|Champion|5|FALSE|1
+2|Snookums|4|TRUE|2
+3|Craig|8|TRUE|1
+4|Duck|2|FALSE|2
+
+2.
+sqlite> UPDATE dogs SET insanity = 'TRUE' WHERE name = 'Duck';
+
+3.
+sqlite> SELECT * FROM dogs, breeds;
+1|Champion|5|FALSE|1|1|Golden Retriever
+1|Champion|5|FALSE|1|2|Corgi
+2|Snookums|4|TRUE|2|1|Golden Retriever
+2|Snookums|4|TRUE|2|2|Corgi
+3|Craig|8|TRUE|1|1|Golden Retriever
+3|Craig|8|TRUE|1|2|Corgi
+4|Duck|2|TRUE|2|1|Golden Retriever
+4|Duck|2|TRUE|2|2|Corgi
+
+4.
+sqlite> SELECT dogs.name, dogs.insanity, breeds.name FROM dogs, breeds;
+Champion|FALSE|Golden Retriever
+Champion|FALSE|Corgi
+Craig|TRUE|Golden Retriever
+Craig|TRUE|Corgi
+Duck|TRUE|Golden Retriever
+Duck|TRUE|Corgi
+
+5.
+sqlite> DELETE FROM dogs WHERE name = 'Snookums';
+
+
+RELEASE 3
+
+SELECT dogs.name, breeds.name, dogs.insanity FROM dogs JOIN breeds ON dogs.breed_id = breeds.id;
+
+SELECT dogs.name, breeds.name, dogs.insanity FROM breeds JOIN dogs ON dogs.breed_id = breeds.id;
+
+I don't know what else to join with what I gave it. Interesting that if I switch the tables in the statement it still works.
